@@ -1,40 +1,18 @@
-let operation;
-let result;
-$(document).ready(function() {
-    $(".num").on('click',function(){
-        $(".wendow").text($(".wendow").text()+$(this).text());
-    });
-    $(".op").on('click',function(){
-        operation=$(this).text();
-       
-        if(result==null)
-        {
-            result=parseInt($(".wendow").text());
-        }
-        $(".wendow").text("");
-    });
-    $(".result").on('click',function(){
-        let namber=parseInt($(".wendow").text());
-      switch(operation)
-      {
-        case '+':
-            result+=namber;
-            break;
-        case '-':
-            result-=namber;
-            break;
-        case '*':
-            result*=namber;
-            break;
-        case '/':
-            result/=namber;
-            break;
-      }  
-      $(".wendow").text(result);
-    });
-    $(".clear").on('click',function(){
-        result=null;
-        operation=null;
-        $(".wendow").text("");
-    })
+$.ajax({
+    url: "https://backendkalkulator3-d0c4fdefdbe2ahe6.polandcentral-01.azurewebsites.net",
+
+    method: "POST",
+    contentType: "application/json",
+    data: JSON.stringify({
+        a: firstNumber,
+        b: secondNumber,
+        operator: operation
+    }),
+    success: function (res) {
+        $(".wendow").text(res.result);
+    },
+    error: function (err) {
+        console.error(err);
+        alert("Błąd backendu");
+    }
 });
