@@ -4,13 +4,14 @@
   "description": "Frontend kalkulatora",
   "main": "index.html",
   "scripts": {
-  "start": "serve -s . -l $PORT"
+  "start": "cross-env PORT=%PORT% serve -s . -l %PORT%"
 }
 ,
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^10.1.0",
     "serve": "^14.2.0"
   }
 }
