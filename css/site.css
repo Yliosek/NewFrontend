@@ -1,0 +1,44 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+    width: 600px;
+    height: 900px;
+    margin: 0 auto;
+    border: 1px solid black;
+      background-color: rgb(100, 190, 255);
+    }
+    
+    .wendow { 
+        grid-area: 1 / 1 / 3 / 5;
+        box-shadow: 2px 2px 5px 0 #000;
+        font-size: 2rem;
+     }
+    .addition { grid-area: 3 / 1 / 4 / 2; }
+    .subtraction { grid-area: 3 / 2 / 4 / 3; }
+    .delate { grid-area: 3 / 3 / 4 / 4; }
+    .multiplication { grid-area: 4 / 1 / 5 / 2; }
+    .division { grid-area: 4 / 2 / 5 / 3; }
+    .result { grid-area: 4 / 3 / 5 / 4; }
+    .N7 { grid-area: 5 / 1 / 6 / 2; }
+    .N8 { grid-area: 5 / 2 / 6 / 3; }
+    .N9 { grid-area: 5 / 3 / 6 / 4; }
+    .N4 { grid-area: 6 / 1 / 7 / 2; }
+    .N5 { grid-area: 6 / 2 / 7 / 3; }
+    .N6 { grid-area: 6 / 3 / 7 / 4; }
+    .N1 { grid-area: 7 / 1 / 8 / 2; }
+    .N2 { grid-area: 7 / 2 / 8 / 3; }
+    .N3 { grid-area: 7 / 3 / 8 / 4; }
+    .N { grid-area: 8 / 1 / 8 / 2; }
+    .N0 { grid-area: 8 / 2 / 8 / 3; }
+    .N { grid-area: 8 / 3 / 8 / 4; }
+ .buton
+ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    box-shadow: 2px 2px 5px 0 #000;
+ }
